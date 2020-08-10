@@ -4,8 +4,14 @@
 		<h2>App</h2>
 		<main class="main-content">
 			<QuestionBox
-				v-if="questions.length"
+				v-if="questions.length && index < 10"
 				:currentQuestionObj="questions[index]"
+				:nextIndex="nextIndex"
+				:questionNumber="questionNumber"
+			/>
+			<Score
+				v-if="index === 10"
+				:numCorrectAnswers="numCorrect"
 			/>
 		</main>
 		<Footer />
@@ -15,6 +21,7 @@
 <script>
 import Header from './components/Header.vue'
 import QuestionBox from './components/QuestionBox.vue'
+import Score from './components/Score.vue'
 import Footer from './components/Footer.vue'
 
 export default {
@@ -22,6 +29,7 @@ export default {
 	components: {
 		Header,
 		QuestionBox,
+		Score,
 		Footer
 	},
 	data() {
@@ -29,6 +37,16 @@ export default {
 			questions: [],
 			index: 0,
 			numCorrect: 0
+		}
+	},
+	methods: {
+		nextIndex() {
+			this.index++
+		}
+	},
+	computed: {
+		questionNumber() {
+			return this.index + 1
 		}
 	},
 	async created() {
@@ -45,11 +63,9 @@ export default {
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

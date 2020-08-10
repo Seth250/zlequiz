@@ -1,5 +1,11 @@
 <template>
-	<div>
-		<h2>Header</h2>
+	<div class="page-header">
+		<h1>Zlequiz</h1>
 	</div>
 </template>
+
+<script>
+export default {
+	name: 'Header'
+}
+</script>
