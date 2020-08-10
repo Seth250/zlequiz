@@ -1,20 +1,19 @@
 <template>
   <div id="app">
 		<Header />
-		<h2>App</h2>
 		<main class="main-content">
 			<QuestionBox
 				v-if="questions.length && index < 10"
 				:currentQuestionObj="questions[index]"
 				:nextIndex="nextIndex"
 				:questionNumber="questionNumber"
+				:incrementScore="incrementScore"
 			/>
 			<Score
 				v-if="index === 10"
 				:numCorrectAnswers="numCorrect"
 			/>
 		</main>
-		<Footer />
   </div>
 </template>
 
@@ -22,15 +21,13 @@
 import Header from './components/Header.vue'
 import QuestionBox from './components/QuestionBox.vue'
 import Score from './components/Score.vue'
-import Footer from './components/Footer.vue'
 
 export default {
 	name: 'App',
 	components: {
 		Header,
 		QuestionBox,
-		Score,
-		Footer
+		Score
 	},
 	data() {
 		return {
@@ -42,6 +39,9 @@ export default {
 	methods: {
 		nextIndex() {
 			this.index++
+		},
+		incrementScore() {
+			this.numCorrect++
 		}
 	},
 	computed: {
@@ -60,12 +60,3 @@ export default {
 	}
 }
 </script>
-
-<style lang="scss">
-#app {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-</style>

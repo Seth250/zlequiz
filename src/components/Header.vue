@@ -1,7 +1,7 @@
 <template>
-	<div class="page-header">
+	<header class="page-header">
 		<h1>Zlequiz</h1>
-	</div>
+	</header>
 </template>
 
 <script>
