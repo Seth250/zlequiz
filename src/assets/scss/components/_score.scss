@@ -1,3 +1,7 @@
+$canvas-width: 200px;
+$canvas-height: 200px;
+$stroke-width: 18px;
+
 .score-header{
   padding: 1em 0;
   margin-bottom: 1em;
@@ -10,7 +14,6 @@
 
 .score-details{
   position: relative;
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,10 +22,10 @@
 .circle{
   position: absolute;
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: $canvas-width;
+  height: $canvas-height;
   background: transparent;
-  border: 18px solid whitesmoke;
+  border: $stroke-width solid whitesmoke;
 }
 
 .btn-container{
@@ -34,5 +37,13 @@
   font-family: inherit;
   width: 100%;
   color: $pry-clr;
-  background: grey;
+  background: rgb(60, 77, 131);
+
+  i{
+    margin-left: 0.25em;
+  }
+
+  &:hover{
+    background: rgb(51, 64, 104);
+  }
 }

@@ -1,20 +1,18 @@
 <template>
-	<!-- v-if="questions.length && index < 10"
-				v-if="index === 10"
-											-->
   <div id="app">
 		<Header />
 		<main class="main-content">
 			<QuestionBox
-				v-if="questions.length > 10"
+				v-if="questions.length && index < 10"
 				:currentQuestionObj="questions[index]"
 				:nextIndex="nextIndex"
 				:questionNumber="questionNumber"
 				:incrementScore="incrementScore"
 			/>
 			<Score
-				v-if="index < 10"
+				v-if="index === 10"
 				:numCorrectAnswers="numCorrect"
+				:resetParams="resetParams"
 			/>
 		</main>
   </div>
@@ -45,6 +43,19 @@ export default {
 		},
 		incrementScore() {
 			this.numCorrect++
+		},
+		async fetchData() {
+			try {
+				const response = await fetch('https://opentdb.com/api.php?amount=10&type=multiple')
+				const { results } = await response.json()
+				this.questions = results
+			} catch (err) {
+				console.log(err)
+			}
+		},
+		resetParams() {
+			Object.assign(this.$data, this.$options.data.call(this))
+			this.fetchData()
 		}
 	},
 	computed: {
@@ -52,14 +63,8 @@ export default {
 			return this.index + 1
 		}
 	},
-	async created() {
-		try {
-			const response = await fetch('https://opentdb.com/api.php?amount=10&type=multiple')
-			const { results } = await response.json()
-			this.questions = results
-		} catch (err) {
-			console.log(err)
-		}
+	created() {
+		this.fetchData()
 	}
 }
 </script>

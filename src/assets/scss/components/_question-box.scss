@@ -38,7 +38,7 @@
   list-style: none;
 
   &:hover{
-    background: #4078A6;
+    background: #4078a6;    
     color: $pry-clr;
   }
 }
@@ -65,8 +65,16 @@
 
 .correct-answer{
   background: #297C4E;
+
+  &:focus{
+    background: #297C4E;
+  }
 }
 
 .incorrect-answer{
   background: #a70000;
+
+  &:focus{
+    background: #a70000;
+  }
 }
