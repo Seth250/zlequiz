@@ -1,6 +1,6 @@
 <template>
 	<header class="page-header">
-		<h1>Zlequiz</h1>
+		<h1><a href="/">Zlequiz</a></h1>
 	</header>
 </template>
 

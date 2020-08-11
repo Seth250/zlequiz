@@ -1,16 +1,19 @@
 <template>
+	<!-- v-if="questions.length && index < 10"
+				v-if="index === 10"
+											-->
   <div id="app">
 		<Header />
 		<main class="main-content">
 			<QuestionBox
-				v-if="questions.length && index < 10"
+				v-if="questions.length > 10"
 				:currentQuestionObj="questions[index]"
 				:nextIndex="nextIndex"
 				:questionNumber="questionNumber"
 				:incrementScore="incrementScore"
 			/>
 			<Score
-				v-if="index === 10"
+				v-if="index < 10"
 				:numCorrectAnswers="numCorrect"
 			/>
 		</main>

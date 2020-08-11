@@ -1,0 +1,39 @@
+.container{
+  border: 1px solid lightgrey;
+  width: 42vw;
+  padding: 1.5em 2em;
+  background: #fff;
+  box-shadow: 0.04rem 0.04rem 0.3rem 0 rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+@media only screen and (max-width: 1024px){
+  .container{
+    width: 52vw;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .container{
+    width: 70vw;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .container{
+    width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 480px){
+  .container{
+    width: 90vw;
+    padding: 1.5em;
+  }
+}
+
+@media only screen and (min-width: 1920px){
+  .container{
+    width: 35vw;
+  }
+}

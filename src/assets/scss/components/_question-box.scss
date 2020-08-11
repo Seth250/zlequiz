@@ -1,12 +1,3 @@
-.container{
-  border: 1px solid lightgrey;
-  width: 42vw;
-  padding: 1.5em 2em;
-  background: #fff;
-  box-shadow: 0.04rem 0.04rem 0.3rem 0 rgba(0, 0, 0, 0.7);
-  text-align: center;
-}
-
 .question{
   // border: 1px solid black;
   padding: 1em 0;
@@ -36,16 +27,11 @@
 }
 
 .answer, 
-.btn{
-  font-size: 110%;
-  padding: 1em 0;
-  cursor: pointer;
-  border-radius: 0.3rem;
-  box-shadow: 0.025rem 0.025rem 0.2rem 0 rgba(0, 0, 0, 0.7);
+.btn-pry{
+  @include btn-styles;
 }
 
 .answer{
-  border: 1px solid transparent;
   background: #f0f0f0;
   color: #4682B4;
   margin-bottom: 1.25em;
@@ -57,11 +43,10 @@
   }
 }
 
-.btn{
-  border: 1px solid transparent;
+.btn-pry{
   margin-top: 1.5em;
   width: 100%;
-  font: inherit;
+  font-family: inherit;
   color: $pry-clr;
   background: $pry-bg;
   // background: #3fb28f;
@@ -84,35 +69,4 @@
 
 .incorrect-answer{
   background: #a70000;
-}
-
-@media only screen and (max-width: 1024px){
-  .container{
-    width: 52vw;
-  }
-}
-
-@media only screen and (max-width: 768px){
-  .container{
-    width: 70vw;
-  }
-}
-
-@media only screen and (max-width: 600px){
-  .container{
-    width: 80vw;
-  }
-}
-
-@media only screen and (max-width: 480px){
-  .container{
-    width: 90vw;
-    padding: 1.5em;
-  }
-}
-
-@media only screen and (min-width: 1920px){
-  .container{
-    width: 35vw;
-  }
 }

@@ -1,0 +1,38 @@
+.score-header{
+  padding: 1em 0;
+  margin-bottom: 1em;
+}
+
+#counter{
+  // background: red;
+  z-index: 1;
+}
+
+.score-details{
+  position: relative;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle{
+  position: absolute;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  background: transparent;
+  border: 18px solid whitesmoke;
+}
+
+.btn-container{
+  padding: 2em 0;
+}
+
+.btn-sec{
+  @include btn-styles;
+  font-family: inherit;
+  width: 100%;
+  color: $pry-clr;
+  background: grey;
+}

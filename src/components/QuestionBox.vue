@@ -10,6 +10,7 @@
 				<li
 					v-for="(answer, index) in shuffledAnswersArr"
 					:key="index"
+					tabindex="0"
 					class="answer"
 					:class="[answerClass(index)]"
 					@click="selectAnswer(index)">
@@ -19,7 +20,7 @@
 			<button
 				type="button"
 				@click="nextIndex"
-				class="btn"
+				class="btn-pry"
 				:class="{disabled: !questionAnswered}"
 				:disabled="!questionAnswered">
 				{{ nextOrEndText }}
