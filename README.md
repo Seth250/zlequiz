@@ -25,3 +25,5 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+file:///C:/Users/user/Videos/Captures/zlequiz_img_1.png
