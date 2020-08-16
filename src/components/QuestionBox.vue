@@ -66,7 +66,7 @@ export default {
 			this.currentQuestionObj.incorrect_answers.forEach((answer) => answers.push(he.decode(answer)))
 			this.shuffledAnswersArr = _.shuffle(answers)
 			this.correctIndex = this.shuffledAnswersArr.indexOf(correctAnswer)
-			console.log(this.correctIndex)
+			// console.log(this.correctIndex)
 		},
 		selectAnswer(index) {
 			this.selectedIndex = index
