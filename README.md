@@ -1,5 +1,7 @@
 # zlequiz
 
+## Responsive Quiz Application built with Vue.Js
+
 ## Project setup
 ```
 npm install
