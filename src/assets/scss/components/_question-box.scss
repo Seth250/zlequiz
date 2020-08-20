@@ -8,7 +8,7 @@
 
   h2{
     font-size: 145%;
-    // letter-spacing : 0.01em;
+    //letter-spacing : 0.01em;
   }
 }
 
@@ -68,17 +68,26 @@
 }
 
 .correct-answer{
-  background: #267449;
+  background: #246e46;
 
   &:focus{
-    background: #267449;
+    background: #246e46;
   }
 }
 
 .incorrect-answer{
-  background: #a70000;
+  background: #a50000;
 
   &:focus{
-    background: #a70000;
+    background: #a50000;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .question{
+    h2{
+      font-size: 135%;
+      letter-spacing: 0.01em;
+    }
   }
 }

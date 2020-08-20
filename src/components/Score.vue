@@ -42,7 +42,8 @@ export default {
 			this.counterElem.clearRect(0, 0, this.canvasWidth, this.canvasHeight)
 			this.counterElem.lineWidth = 18
 			this.counterElem.fillStyle = '#000'
-			this.counterElem.strokeStyle = '#071f86'
+			// this.counterElem.strokeStyle = '#071f86'
+			this.counterElem.strokeStyle = '#383f77'
 			this.counterElem.textAlign = 'center'
 			this.counterElem.font = '500 1.5rem Roboto'
 			this.counterElem.fillText(`${this.num}%`, 100, 110)
