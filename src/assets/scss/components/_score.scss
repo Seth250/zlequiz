@@ -48,3 +48,9 @@ $stroke-width: 18px;
     background: rgb(51, 64, 104);
   }
 }
+
+@media only screen and (max-width: 768px){
+  .btn-sec{
+    font-size: 105%;
+  }
+}

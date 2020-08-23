@@ -6,9 +6,18 @@
     margin-bottom: 0.5em;
   }
 
-  h2{
-    font-size: 145%;
-    //letter-spacing : 0.01em;
+  p{
+    font-size: 142%;
+    font-weight: 500;
+    letter-spacing : 0.01em;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .question{
+    p{
+      font-size: 130%;
+    }
   }
 }
 
@@ -29,6 +38,13 @@
 .answer, 
 .btn-pry{
   @include btn-styles;
+}
+
+@media only screen and (max-width: 768px){
+  .answer,
+  .btn-pry{
+    font-size: 105%;
+  }
 }
 
 .answer{
@@ -80,14 +96,5 @@
 
   &:focus{
     background: #a50000;
-  }
-}
-
-@media only screen and (max-width: 768px){
-  .question{
-    h2{
-      font-size: 135%;
-      letter-spacing: 0.01em;
-    }
   }
 }
