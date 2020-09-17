@@ -3,11 +3,12 @@
 
   h3{
     color: #2d577a;
-    margin-bottom: 0.5em;
+    // color: rgb(56, 72, 126);
   }
 
   p{
-    font-size: 142%;
+    font-size: 1.38rem;
+    // font-size: 142%;
     font-weight: 500;
     letter-spacing : 0.01em;
   }
@@ -26,7 +27,7 @@
   height: 0.3rem;
   // background: rgb(106, 128, 202);
   background: rgb(75, 99, 177);
-  margin: 0.5em 0;
+  margin: 0.75em 0;
   transform-origin: 0% 0%;
   transition: transform 0.3s linear;
 }
@@ -51,12 +52,15 @@
   background: #f0f0f0;
   // color: #4682B4;
   color: #2d577a;
+  // color: rgb(56, 72, 126);
   margin-bottom: 1.25em;
   list-style: none;
 
   &:hover{
     // background: #4078a6;
-    background: #2f5a7e;    
+    // background: #2f5a7e;
+    background: rgb(56, 72, 126);
+    // background: rgb(56, 63, 117);
     color: $pry-clr;
   }
 }
@@ -64,7 +68,6 @@
 .btn-pry{
   margin-top: 1.5em;
   width: 100%;
-  font-family: inherit;
   color: $pry-clr;
   background: $pry-bg;
 

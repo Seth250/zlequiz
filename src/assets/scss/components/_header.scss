@@ -1,24 +1,25 @@
 .page-header{
-  padding: 1.1em 10%;
-  text-align: left;
+  padding: 0.75em 10%;
+  letter-spacing: 0.02em;
   color: $pry-clr;
   background: $pry-bg;
 
+  h1{
+    display: inline-block;
+  }
+
   a{
+    display: block;
     text-decoration: none;
     color: inherit;
+    font-size: 90%;
   }
 }
 
 @media only screen and (max-width: 768px){
-	.page-header{
-		font-size: 92%;
-		letter-spacing: 0.025em;
-	}
-}
-
-@media only screen and (max-width: 600px){
-	.page-header{
-		font-size: 85%;
+	.page-header{   
+    a{
+      font-size: 76%;
+    }
 	}
 }

@@ -34,7 +34,6 @@ $stroke-width: 18px;
 
 .btn-sec{
   @include btn-styles;
-  font-family: inherit;
   width: 100%;
   color: $pry-clr;
   background: rgb(56, 72, 126);
