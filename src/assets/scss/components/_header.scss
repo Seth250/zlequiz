@@ -1,5 +1,5 @@
 .page-header{
-  padding: 0.75em 10%;
+  padding: 0.8em 10%;
   letter-spacing: 0.02em;
   color: $pry-clr;
   background: $pry-bg;
@@ -12,14 +12,14 @@
     display: block;
     text-decoration: none;
     color: inherit;
-    font-size: 90%;
+    font-size: 82%;
   }
 }
 
 @media only screen and (max-width: 768px){
 	.page-header{   
     a{
-      font-size: 76%;
+      font-size: 75%;
     }
 	}
 }

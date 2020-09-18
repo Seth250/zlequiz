@@ -13,13 +13,15 @@
 					tabindex="0"
 					class="answer"
 					:class="[answerClass(index)]"
-					@click="selectAnswer(index)">
+					@click="selectAnswer(index)"
+					@keypress.enter="selectAnswer(index)">
 					{{ answer }}
 				</li>
 			</ul>
 			<button
 				type="button"
 				@click="nextIndex"
+				@keypress.enter="nextIndex"
 				class="btn-pry"
 				:class="{disabled: !questionAnswered}"
 				:disabled="!questionAnswered">

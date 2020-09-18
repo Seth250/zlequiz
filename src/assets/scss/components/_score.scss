@@ -36,7 +36,8 @@ $stroke-width: 18px;
   @include btn-styles;
   width: 100%;
   color: $pry-clr;
-  background: rgb(56, 72, 126);
+  // background: rgb(56, 72, 126);
+  background: linear-gradient(to top right, rgb(49, 79, 177), rgb(56, 72, 126));
   // background: rgb(56, 63, 117);
 
   i{
@@ -44,7 +45,7 @@ $stroke-width: 18px;
   }
 
   &:hover{
-    background: rgb(51, 64, 104);
+    background: rgb(52, 70, 129);
   }
 }
 
