@@ -59,7 +59,8 @@
   &:hover{
     // background: #4078a6;
     // background: #2f5a7e;
-    background: rgb(56, 72, 126);
+    // background: rgb(56, 72, 126);
+    background: linear-gradient(to top right, rgb(56, 72, 126), #2f5a7e);
     // background: rgb(56, 63, 117);
     color: $pry-clr;
   }
@@ -87,17 +88,19 @@
 }
 
 .correct-answer{
-  background: #246e46;
+  // background: #246e46;
+  background: linear-gradient(to bottom right, #278050, #18643c);
 
   &:focus{
-    background: #246e46;
+    background: linear-gradient(to bottom right, #278050, #18643c);
   }
 }
 
 .incorrect-answer{
-  background: #a50000;
+  // background: #a50000;
+  background: linear-gradient(to right, #a50000, #b60c0c);
 
   &:focus{
-    background: #a50000;
+    background: linear-gradient(to right, #a50000, #b60c0c);
   }
 }
