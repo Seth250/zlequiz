@@ -22,12 +22,21 @@
   }
 }
 
+.bar-container{
+  position: relative;
+  height: 0.25rem;
+  margin: 0.75em 0;
+  background: $bar-clr;
+}
+
 .progress-bar{
-  border: 1px solid transparent;
-  height: 0.3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   // background: rgb(106, 128, 202);
   background: rgb(75, 99, 177);
-  margin: 0.75em 0;
   transform-origin: 0% 0%;
   transition: transform 0.3s linear;
 }

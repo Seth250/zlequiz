@@ -15,7 +15,7 @@
 
 <script>
 export default {
-	name: 'Score',
+	name: 'UserScore',
 	props: {
 		numCorrectAnswers: Number,
 		resetParams: Function
@@ -44,7 +44,7 @@ export default {
 			this.counterElem.fillStyle = '#000'
 			// this.counterElem.strokeStyle = '#071f86'
 			// this.counterElem.strokeStyle = '#383f77'
-			// this.counterElem.strokeStyle = 'rgb(56, 63, 117)'
+			// this.counterElem.strokeStyle = '#3b4c83'
 			this.counterElem.strokeStyle = 'rgb(59, 76, 131)'
 			this.counterElem.textAlign = 'center'
 			this.counterElem.font = '500 1.5rem Roboto'

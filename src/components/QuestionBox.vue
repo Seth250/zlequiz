@@ -2,7 +2,10 @@
 	<div class="container">
 		<div class="question">
 			<h3>Question {{ questionNumber }} / 10</h3>
-			<div class="progress-bar" :style="progressStyle"></div>
+			<!-- <div class="progress-bar" :style="progressStyle"></div> -->
+			<div class="bar-container">
+				<div class="progress-bar" :style="progressStyle"></div>
+			</div>
 			<p>{{ currentQuestion }}</p>
 		</div>
 		<div class="answers-container">

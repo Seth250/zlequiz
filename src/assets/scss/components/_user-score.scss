@@ -25,7 +25,7 @@ $stroke-width: 18px;
   width: $canvas-width;
   height: $canvas-height;
   background: transparent;
-  border: $stroke-width solid whitesmoke;
+  border: $stroke-width solid $bar-clr;
 }
 
 .btn-container{

@@ -1,34 +1,34 @@
 <template>
   <div id="app">
-		<Header />
+		<PageHeader />
 		<main class="main-content">
 			<QuestionBox
 				v-if="questions.length && index < 10"
-				:currentQuestionObj="questions[index]"
-				:nextIndex="nextIndex"
-				:questionNumber="questionNumber"
-				:incrementScore="incrementScore"
+				:current-question-obj="questions[index]"
+				:next-index="nextIndex"
+				:question-number="questionNumber"
+				:increment-score="incrementScore"
 			/>
-			<Score
+			<UserScore
 				v-if="index === 10"
-				:numCorrectAnswers="numCorrect"
-				:resetParams="resetParams"
+				:num-correct-answers="numCorrect"
+				:reset-params="resetParams"
 			/>
 		</main>
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
+import PageHeader from './components/PageHeader.vue'
 import QuestionBox from './components/QuestionBox.vue'
-import Score from './components/Score.vue'
+import UserScore from './components/UserScore.vue'
 
 export default {
 	name: 'App',
 	components: {
-		Header,
+		PageHeader,
 		QuestionBox,
-		Score
+		UserScore
 	},
 	data() {
 		return {
