@@ -1,40 +1,30 @@
 .container{
   border: 1px solid lightgrey;
-  width: 40vw;
+  width: 39vw;
   padding: 1em 2em;
   background: #fff;
-  box-shadow: 0.05rem 0.05rem 0.2rem 0 rgba(0, 0, 0, 0.7);
+  box-shadow: 0.05rem 0.05rem 0.2rem 0 rgba(0, 0, 0, 0.6);
   text-align: center;
   border-radius: $pry-bdr-rad;
 }
 
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1280px){
   .container{
-    width: 52vw;
-  }
-}
-
-@media only screen and (max-width: 768px){
-  .container{
-    width: 68vw;
+    // width: 52vw;
+    width: 34rem;
   }
 }
 
 @media only screen and (max-width: 600px){
   .container{
-    width: 80vw;
-    padding: 1em 1.5em;
-  }
-}
-
-@media only screen and (max-width: 480px){
-  .container{
-    width: 90vw;
+    width: 88vw;
+    padding: 0.5em 4%;
   }
 }
 
 @media only screen and (min-width: 1920px){
   .container{
-    width: 32vw;
+    // width: 30vw;
+    width: 40rem;
   }
 }

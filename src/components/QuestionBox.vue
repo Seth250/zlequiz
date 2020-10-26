@@ -17,17 +17,20 @@
 					class="answer"
 					:class="[answerClass(index)]"
 					@click="selectAnswer(index)"
-					@keypress.enter="selectAnswer(index)">
+					@keypress.enter="selectAnswer(index)"
+				>
 					{{ answer }}
 				</li>
 			</ul>
+			<!-- there's no need to add the keypress.enter event listener for buttons because the enter key already
+					triggers a click event (the space key also triggers a click event for buttons) -->
 			<button
 				type="button"
 				@click="nextIndex"
-				@keypress.enter="nextIndex"
 				class="btn-pry"
 				:class="{disabled: !questionAnswered}"
-				:disabled="!questionAnswered">
+				:disabled="!questionAnswered"
+			>
 				{{ nextOrEndText }}
 			</button>
 		</div>
@@ -74,19 +77,21 @@ export default {
 			// console.log(this.correctIndex)
 		},
 		selectAnswer(index) {
-			this.selectedIndex = index
-			this.questionAnswered = true
-			if (this.selectedIndex === this.correctIndex) {
-				this.incrementScore()
+			if (!this.questionAnswered) {
+				this.selectedIndex = index
+				this.questionAnswered = true
+				if (this.selectedIndex === this.correctIndex) {
+					this.incrementScore()
+				}
 			}
 		},
 		answerClass(index) {
 			if (this.questionAnswered) {
-				let answerClass = 'disabled '
+				let answerClass = 'disabled'
 				if (this.correctIndex === index) {
-					answerClass += 'correct-answer'
+					answerClass += ' correct-answer'
 				} else if (this.selectedIndex !== this.correctIndex && this.selectedIndex === index) {
-					answerClass += 'incorrect-answer'
+					answerClass += ' incorrect-answer'
 				}
 				return answerClass
 			}

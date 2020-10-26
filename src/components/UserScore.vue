@@ -8,7 +8,13 @@
 			<canvas id="counter" width="200" height="200"></canvas>
 		</div>
 		<div class="btn-container">
-			<button type="button" class="btn-sec" @click="resetParams">Play Again <i class="fas fa-sync"></i></button>
+			<button
+				type="button"
+				class="btn-sec"
+				@click="resetParams"
+			>
+				Play Again <i class="fas fa-sync"></i>
+			</button>
 		</div>
 	</div>
 </template>
