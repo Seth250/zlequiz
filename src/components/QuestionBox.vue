@@ -15,7 +15,7 @@
 					:key="index"
 					tabindex="0"
 					class="answer"
-					:class="[answerClass(index)]"
+					:class="answerClass(index)"
 					@click="selectAnswer(index)"
 					@keypress.enter="selectAnswer(index)"
 				>
@@ -87,13 +87,11 @@ export default {
 		},
 		answerClass(index) {
 			if (this.questionAnswered) {
-				let answerClass = 'disabled'
-				if (this.correctIndex === index) {
-					answerClass += ' correct-answer'
-				} else if (this.selectedIndex !== this.correctIndex && this.selectedIndex === index) {
-					answerClass += ' incorrect-answer'
+				return {
+					disabled: true,
+					'correct-answer': this.correctIndex === index,
+					'incorrect-answer': this.selectedIndex !== this.correctIndex && this.selectedIndex === index
 				}
-				return answerClass
 			}
 		}
 	},
@@ -106,7 +104,8 @@ export default {
 		},
 		progressStyle() {
 			// return `width: ${this.questionNumber / 10 * 100}%;`
-			return `transform: scaleX(${this.questionNumber / 10})`
+			// return `transform: scaleX(${this.questionNumber / 10})`
+			return { transform: `scaleX(${this.questionNumber / 10})` }
 		}
 	}
 }
